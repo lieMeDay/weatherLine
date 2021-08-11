@@ -1,0 +1,94 @@
+page{
+  background-color: #f2f2f2;
+}
+/* 5天 */
+.d2{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 16rpx;
+  position: relative;
+  background-color: #fff;
+}
+.data_b_item{
+	width: calc(20% - 1px);
+	border-right: 1px solid #E8E8E8;
+	text-align: center;
+}
+.data_b_item_nb{
+	border: none;
+}
+.data_b_item>view{
+	width: 100%;
+}
+.d_block{
+	width: 100%;
+	height: 80px;
+	margin: 10rpx 0;
+}
+.d_week,.d_state{
+	color: 	#333333;
+	font-size: 26rpx;
+	line-height: 50rpx;
+}
+.d_day,.d_wind,.d_wind_level{
+	color: #999999;
+	font-size: 24rpx;
+	line-height: 40rpx;
+	height: 40rpx;
+}
+.weatherLine{
+	width: calc(100% - 20% + 28px);
+	height: 80px;
+	position: absolute;
+	bottom: 90rpx;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.weatherIcon{
+  width: 110rpx;
+  height: 110rpx;
+}
+.windIcon{
+  width: 24rpx;
+  height: 24rpx;
+}
+
+.block{
+  width: 100%;
+  height: 30rpx;
+}
+/* 24小时 */
+.dHours{
+	width: 100%;
+	position: relative;
+	display: inline-block;
+  white-space: nowrap;
+  background-color: #fff;
+}
+.dh_item{
+	width: 132rpx;
+	text-align: center;
+	display: inline-block;
+	padding-bottom: 16rpx;
+}
+.dh_block{
+	width: 132rpx;
+	height: 80px;
+}
+.dh_weather{
+	font-size: 24rpx;
+	color: #999;
+}
+.dh_time{
+	font-size: 26rpx;
+	color: #999;
+}
+.hourLine{
+	width: calc((7 * 132rpx) + 28px);
+	height: 80px;
+	position: absolute;
+	top: 0;
+	left: calc(66rpx - 14px);
+}

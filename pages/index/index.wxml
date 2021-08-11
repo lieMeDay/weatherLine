@@ -1,0 +1,33 @@
+<view class="d2">
+  <view class="data_b_item" wx:for="{{dayArrs}}" wx:key="index" :class="i==dayArrs.length-1?'.data_b_item_nb':''">
+    <view class="d_week">{{item.week}}</view>
+    <view class="d_day">{{item.date}}</view>
+    <view class="d_icon">
+      <image src="/img/w1.png" class="weatherIcon"></image>
+    </view>
+    <view class="d_state">{{item.wether}}</view>
+    <view class="d_block"></view>
+    <view class="d_wind">
+      <image src="/img/f1.png" class="windIcon"></image>
+    </view>
+    <view class="d_wind_level">{{item.wind_scale?item.wind_scale+'级':''}}</view>
+  </view>
+  <view class="weatherLine">
+		<ec-canvas id="mychart-day-line" canvas-id="myCanvasD" ec="{{ ec }}"></ec-canvas>
+  </view>
+</view>
+<view class="block"></view>
+<scroll-view class="dHours" scroll-x>
+  <view class="dh_item" wx:for="{{hourArrs}}" wx:key="index">
+    <view class="dh_block"></view>
+    <view class="dh_weather">{{item.weather}}</view>
+    <view class="dh_wind_f">
+      <image src="/img/f1.png" class="windIcon"></image>
+    </view>
+    <view class="dh_wind dh_weather">{{item.wind}}</view>
+    <view class="dh_time">{{item.bjTime}}</view>
+  </view>
+  <view class="hourLine">
+    <ec-canvas id="mychart-day-line" canvas-id="myCanvasD" ec="{{ ecH }}"></ec-canvas>
+  </view>
+</scroll-view>
